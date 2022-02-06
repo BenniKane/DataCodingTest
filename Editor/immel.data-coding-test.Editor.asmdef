@@ -1,7 +1,9 @@
 {
     "name": "immel.data-coding-test.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:d8c5ad49586f7b74e8ed73082715c75d"
+    ],
     "includePlatforms": [
         "Editor"
     ],
