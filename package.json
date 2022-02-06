@@ -1,0 +1,12 @@
+{
+    "name": "com.immel.data-coding-test",
+    "version": "1.0.0",
+    "displayName": "Data Coding Test",
+    "description": "Code written for a coding test to write custom editor scripts/property drawers/editors for Unity",
+    "unity": "2020.3",
+    "unityRelease": "27f1",
+    "author": {
+        "name": "Benjamin Immel",
+        "email": "bennikane@gmail.com"
+    }
+}
