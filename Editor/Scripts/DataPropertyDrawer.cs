@@ -69,7 +69,7 @@ namespace Immel.DataCodingTest.Editor
         {
             var fields = typeof(Data).GetFields();
             var maxItemCount = 0;
-
+            var anyFieldExpanded = false;
             // Iterate over all our fields, checking that they're valid, an array, and expanded.
             foreach(var field in fields)
             {
@@ -78,16 +78,18 @@ namespace Immel.DataCodingTest.Editor
                 if (subProperty == null || !subProperty.isArray || !subProperty.isExpanded)
                     continue;
 
+                anyFieldExpanded = true;
+
                 maxItemCount = subProperty.arraySize > maxItemCount ? subProperty.arraySize : maxItemCount;
             }
 
             // Base Height is our 2 line tall baseline, one line for the header, one line for the field entry for VectorValue and String Value
             var baseHeight = EditorGUIUtility.singleLineHeight * 2 + EditorGUIUtility.standardVerticalSpacing;
 
-            // We had no items, use our base height
+            // We had no items, use our base height. Also, in the event we've expanded a list without elements, we want to add the extra padding for the +/- buttons that Unity provides
             if (maxItemCount == 0)
             {
-                return baseHeight;
+                return baseHeight + (anyFieldExpanded ? 2 * (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) + EditorGUIUtility.standardVerticalSpacing : 0f);
             }
             else
             {

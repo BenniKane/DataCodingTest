@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d54c50855aee84dba8c4efaaafdf39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataValue:
+    IntegerValues: 
+    VectorValue: {x: 0.46, y: 0.16, z: -0.16}
+    StringValue: asdfasdf
 --- !u!4 &669187034
 Transform:
   m_ObjectHideFlags: 0
@@ -278,6 +282,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6d2374bb1d6cc44a9dceefb7cab84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataValues:
+  - IntegerValues: 03000000
+    VectorValue: {x: 2, y: 1, z: 3}
+    StringValue: asdfa
 --- !u!4 &1332858982
 Transform:
   m_ObjectHideFlags: 0
