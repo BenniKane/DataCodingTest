@@ -5,6 +5,6 @@ namespace Immel.DataCodingTest.Runtime
 {
     public class DataListBehaviour : MonoBehaviour
     {
-        public List<Data> DataValues;
+        [SerializeField] public List<Data> DataValues;
     }
 }
